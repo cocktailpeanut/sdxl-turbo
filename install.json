@@ -1,0 +1,25 @@
+{
+  "requires": [{
+    "type": "conda",
+    "name": "ffmpeg",
+    "args": "-c conda-forge"
+  }],
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "venv": "env",
+      "message": "pip install -r requirements.txt"
+    }
+  }, {
+    "method": "input",
+    "params": {
+      "title": "Install Success",
+      "description": "Go back to the dashboard and launch the app!"
+    }
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "/?selected=sdxl turbo"
+    }
+  }]
+}
