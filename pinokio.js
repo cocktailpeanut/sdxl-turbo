@@ -1,6 +1,7 @@
 module.exports = {
   title: "sdxl turbo",
   description: "A Real-Time Text-to-Image Generation Model",
+  icon: "icon.png",
   menu: async (kernel) => {
     let installed = await kernel.exists(__dirname, "env")
     if (installed) {
