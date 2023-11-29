@@ -16,6 +16,10 @@ pipes = {
   "img2img": AutoPipelineForImage2Image.from_pretrained("stabilityai/sdxl-turbo", torch_dtype=torch.float16, variant="fp16").to(device)
 }
 
+if device == "cpu":
+  pipes["txt2img"].enable_model_cpu_offload()
+  pipes["img2img"].enable_model_cpu_offload()
+
 
 def run(prompt, image):
   print(f"prompt={prompt}, image={image}")
