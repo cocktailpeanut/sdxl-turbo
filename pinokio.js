@@ -36,10 +36,7 @@ module.exports = {
             text: "Running",
             type: "label",
           }, {
-            icon: "fa-solid fa-rocket",
-            text: "Open Web UI",
-            href: session.url,
-            target: "_blank"
+            icon: "fa-solid fa-terminal", text: "Terminal", href: "start.json", params: { fullscreen: true }
           }]
         }
       } else {
