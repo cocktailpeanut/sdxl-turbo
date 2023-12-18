@@ -4,7 +4,7 @@ module.exports = {
   icon: "icon.png",
   menu: async (kernel) => {
     let installed = await kernel.exists(__dirname, "env")
-    let installing = await kernel.require(__dirname, "install.json")
+    let installing = await kernel.running(__dirname, "install.json")
     if (installing) {
       return [{
         icon: "fa-solid fa-plug",
